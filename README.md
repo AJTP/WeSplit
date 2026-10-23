@@ -219,4 +219,4 @@ Configura tu editor para formatear al guardar con Prettier, o ejecuta `pnpm form
 7. Crea las rutas en `src/features/<recurso>/<recurso>.routes.ts` y regístralas en `src/app.ts`.
 8. Crea la migración con `pnpm migrate:create <nombre>` y aplícala con `pnpm migrate:up`.
 9. Crea `rest/<recurso>.rest` con las peticiones de ejemplo para ese recurso.
-10. Crea los tests en `test/<recurso>.test.ts`.
+10. Crea los tests en `test/<recurso>.test.ts`
