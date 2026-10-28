@@ -32,3 +32,19 @@ export const getUserSchema = {
     404: errorResponseSchema,
   },
 };
+
+export const deleteMeSchema = {
+  tags: ["users"],
+  summary: "Elimina la cuenta del usuario autenticado",
+  description:
+    "Borrado definitivo. Identidades, refresh tokens, categorías propias y gastos " +
+    "individuales se eliminan en cascada. Los alias que tuviera en grupos quedan sin " +
+    "reclamar, y sus gastos y pagos de grupo sobreviven sin autor, para no alterar los " +
+    "gastos ni los saldos de los demás miembros.",
+  security: [{ bearerAuth: [] }],
+  response: {
+    204: z.undefined(),
+    401: errorResponseSchema,
+    404: errorResponseSchema,
+  },
+};

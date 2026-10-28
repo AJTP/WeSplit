@@ -41,3 +41,21 @@ export async function revokeAllByUserId(pg: Queryable, userId: string): Promise<
     [userId],
   );
 }
+
+// Revoca solo el refresh token del dispositivo actual (cierre de sesión
+// selectivo). Se exige que pertenezca al usuario autenticado: sin eso,
+// cualquiera podría revocar un refresh token ajeno adivinando o robando el
+// valor en claro de otra sesión.
+export async function revokeByRawTokenForUser(
+  pg: Queryable,
+  userId: string,
+  rawToken: string,
+): Promise<boolean> {
+  const { rows } = await pg.query(
+    `UPDATE refresh_tokens SET revoked_at = now()
+     WHERE token_hash = $1 AND user_id = $2 AND revoked_at IS NULL
+     RETURNING id`,
+    [hashToken(rawToken), userId],
+  );
+  return rows.length > 0;
+}

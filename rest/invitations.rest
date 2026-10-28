@@ -1,0 +1,38 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Obtener el enlace de invitación del grupo (requiere ser miembro)
+# @name getInvitation
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/invitation
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Ver el grupo desde el enlace, sin autenticación (lo autoriza el token)
+# Solo expone el nombre del grupo y sus alias, ninguno con importes ni email.
+GET {{baseUrl}}/invitations/{{getInvitation.response.body.$.token}}
+
+### Ver un token que no existe (404 esperado)
+GET {{baseUrl}}/invitations/esto-no-existe
+
+### Unirse al grupo reclamando uno de sus alias sin dueño
+# member_id debe ser el id de un alias del grupo que todavía no esté
+# reclamado (consultar en la vista pública de arriba o en /members).
+POST {{baseUrl}}/invitations/{{getInvitation.response.body.$.token}}/join
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "member_id": "PEGAR_AQUI_UN_MEMBER_ID_SIN_RECLAMAR"
+}
+
+### Reclamar ese mismo alias otra vez con otro usuario (409 esperado)
+POST {{baseUrl}}/invitations/{{getInvitation.response.body.$.token}}/join
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "member_id": "PEGAR_AQUI_UN_MEMBER_ID_SIN_RECLAMAR"
+}
+
+### Cambiar de alias dentro del grupo (el anterior queda libre)
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/members/PEGAR_AQUI_OTRO_MEMBER_ID/claim
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

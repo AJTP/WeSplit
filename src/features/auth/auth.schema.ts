@@ -45,12 +45,18 @@ export const refreshSchema = {
 
 export const logoutSchema = {
   tags: ["auth"],
-  summary: "Cierra sesión en todos los dispositivos",
+  summary: "Cierra sesión en todos los dispositivos, o solo en el actual",
   description:
-    "Revoca todos los refresh tokens vivos del usuario autenticado. El accessToken en curso sigue siendo válido hasta que expire (JWT_EXPIRES_IN), pero ya no podrá renovarse.",
+    "Sin body, revoca todos los refresh tokens vivos del usuario (comportamiento histórico). " +
+    "Con `refresh_token` en el body, revoca únicamente ese, para cerrar sesión solo en el " +
+    "dispositivo actual. El accessToken en curso sigue siendo válido hasta que expire " +
+    "(JWT_EXPIRES_IN), pero ya no podrá renovarse.",
   security: [{ bearerAuth: [] }],
+  // nullish (no solo optional): sin Content-Type, Fastify entrega `null` como
+  // body, no `undefined`, y hay que aceptar los dos.
+  body: z.object({ refresh_token: z.string().min(1).optional() }).nullish(),
   response: {
-    204: z.null(),
+    204: z.undefined(),
     401: errorResponseSchema,
   },
 };

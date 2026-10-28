@@ -22,12 +22,12 @@
 BEGIN;
 
 -- -----------------------------------------------------------------------------
--- Extensiones y utilidades
+-- Utilidades
 -- -----------------------------------------------------------------------------
 
--- gen_random_uuid() está en el core desde PostgreSQL 13; en versiones
--- anteriores la aporta pgcrypto.
-CREATE EXTENSION IF NOT EXISTS pgcrypto;
+-- gen_random_uuid() está en el core desde PostgreSQL 13 (la migración inicial
+-- de `users` ya lo usa así). No se crea la extensión pgcrypto: añadiría un
+-- requisito de privilegios en CI/Docker a cambio de nada.
 
 -- Mantiene updated_at sin depender de que la aplicación se acuerde.
 CREATE OR REPLACE FUNCTION set_updated_at() RETURNS trigger

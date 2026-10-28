@@ -8,6 +8,8 @@ export class AppException extends Error {
   ) {
     super(message);
     this.name = this.constructor.name;
-    Object.setPrototypeOf(this, AppException.prototype);
+    // new.target.prototype (no AppException.prototype): así instanceof sigue
+    // funcionando también en las subclases.
+    Object.setPrototypeOf(this, new.target.prototype);
   }
 }

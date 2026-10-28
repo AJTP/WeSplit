@@ -20,3 +20,13 @@ export async function createUser(
 ): Promise<User> {
   return userRepository.create(pg, userData);
 }
+
+// Borrado físico: el esquema ya lo resuelve entero por claves foráneas.
+// Identidades, refresh tokens, categorías propias y gastos individuales caen
+// en cascada. Los alias que tuviera en grupos quedan sin reclamar (user_id a
+// NULL) y sus gastos y pagos de grupo sobreviven sin autor (created_by_user_id
+// a NULL): no se alteran los gastos ni los saldos de los demás miembros.
+export async function deleteAccount(pg: Queryable, userId: string): Promise<void> {
+  const deleted = await userRepository.deleteById(pg, userId);
+  if (!deleted) throw new UserNotFoundError(userId);
+}

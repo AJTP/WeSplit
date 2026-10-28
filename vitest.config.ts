@@ -12,6 +12,10 @@ export default defineConfig({
     environment: "node",
     globals: true,
     include: ["test/**/*.test.ts"],
+    // Los tests de integración comparten una sola base de datos y cada uno
+    // la vacía con truncateAll en su afterEach: en paralelo se destruirían
+    // entre sí de forma intermitente.
+    fileParallelism: false,
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],

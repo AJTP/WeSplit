@@ -8,8 +8,20 @@ export default fp(async function errorHandlerPlugin(fastify) {
     reply: FastifyReply,
   ) {
     const statusCode = error.statusCode || 500;
+    const pgError = error as FastifyError & { code?: string; constraint?: string; detail?: string };
 
-    request.log.error({ err: error }, "request error");
+    // pgCode/pgConstraint/pgDetail: sin esto, un fallo de PostgreSQL sin
+    // mapear (ver src/shared/db/pg-errors.ts) sale como "Something went
+    // wrong" y no se ve en el log ni qué constraint lo causó.
+    request.log.error(
+      {
+        err: error,
+        pgCode: pgError.code,
+        pgConstraint: pgError.constraint,
+        pgDetail: pgError.detail,
+      },
+      "request error",
+    );
 
     if (error.validation) {
       reply.status(400).send({

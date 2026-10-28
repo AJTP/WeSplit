@@ -51,3 +51,21 @@ Content-Type: application/json
 {
   "refresh_token": "{{googleLogin.response.body.$.refreshToken}}"
 }
+
+### Logout de un solo dispositivo (con refresh_token en el body)
+# Revoca solo ese refresh token; los demás dispositivos siguen con sesión.
+POST {{baseUrl}}/auth/logout
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "refresh_token": "{{googleLogin.response.body.$.refreshToken}}"
+}
+
+### Listar los proveedores de login vinculados a la cuenta
+GET {{baseUrl}}/users/me/identities
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Desvincular el único proveedor (409 esperado: no puede quedar sin acceso)
+DELETE {{baseUrl}}/users/me/identities/google
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

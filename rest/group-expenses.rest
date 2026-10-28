@@ -1,0 +1,58 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Registrar un gasto de grupo con su reparto
+# Sustituye PEGAR_MEMBER_ID_* por ids reales de /groups/:groupId/members
+# @name createExpense
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "description": "Cena de bienvenida",
+  "amount": 90,
+  "expense_date": "2026-03-15",
+  "paid_by_member_id": "PEGAR_MEMBER_ID_PAGADOR",
+  "shares": [
+    { "member_id": "PEGAR_MEMBER_ID_PAGADOR", "amount": 30 },
+    { "member_id": "PEGAR_MEMBER_ID_2", "amount": 30 },
+    { "member_id": "PEGAR_MEMBER_ID_3", "amount": 30 }
+  ]
+}
+
+### Reparto que no cuadra (422 esperado)
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "description": "Mal repartido",
+  "amount": 90,
+  "expense_date": "2026-03-15",
+  "paid_by_member_id": "PEGAR_MEMBER_ID_PAGADOR",
+  "shares": [
+    { "member_id": "PEGAR_MEMBER_ID_PAGADOR", "amount": 30 },
+    { "member_id": "PEGAR_MEMBER_ID_2", "amount": 30 }
+  ]
+}
+
+### Listar gastos del grupo
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses?page=1&limit=20
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Detalle de un gasto, con su reparto
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses/{{createExpense.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Editar solo la descripción (el reparto no se toca)
+PATCH {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses/{{createExpense.response.body.$.id}}
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "description": "Cena de bienvenida (corregida)"
+}
+
+### Eliminar el gasto (borrado lógico)
+DELETE {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/expenses/{{createExpense.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

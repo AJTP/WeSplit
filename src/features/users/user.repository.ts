@@ -52,3 +52,8 @@ export async function create(
     createdAt: new Date(row.created_at),
   };
 }
+
+export async function deleteById(pg: Queryable, userId: string): Promise<boolean> {
+  const { rows } = await pg.query("DELETE FROM users WHERE id = $1 RETURNING id", [userId]);
+  return rows.length > 0;
+}

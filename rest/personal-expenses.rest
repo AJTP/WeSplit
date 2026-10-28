@@ -1,0 +1,35 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Registrar un gasto individual, sin grupo ni reparto
+# @name createExpense
+POST {{baseUrl}}/expenses
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "description": "Café",
+  "amount": 2.5,
+  "expense_date": "2026-03-15"
+}
+
+### Listar mis gastos individuales
+GET {{baseUrl}}/expenses?page=1&limit=20
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Detalle de un gasto individual
+GET {{baseUrl}}/expenses/{{createExpense.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Editarlo
+PATCH {{baseUrl}}/expenses/{{createExpense.response.body.$.id}}
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "amount": 3
+}
+
+### Eliminarlo (borrado lógico)
+DELETE {{baseUrl}}/expenses/{{createExpense.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

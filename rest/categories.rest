@@ -1,0 +1,30 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Listar categorías visibles (predefinidas + propias)
+GET {{baseUrl}}/categories?page=1&limit=50
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Crear una categoría personalizada
+# @name createCategory
+POST {{baseUrl}}/categories
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "name": "Gimnasio",
+  "color": "#FF6600"
+}
+
+### Editarla
+PATCH {{baseUrl}}/categories/{{createCategory.response.body.$.id}}
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "name": "Deporte"
+}
+
+### Eliminarla
+DELETE {{baseUrl}}/categories/{{createCategory.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

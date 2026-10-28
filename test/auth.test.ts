@@ -216,4 +216,44 @@ describe("auth routes", () => {
 
     expect(response.statusCode).toBe(401);
   });
+
+  it("POST /auth/logout with a refresh_token in the body revokes only that device, leaving others logged in", async () => {
+    mockGoogleProfile();
+    const firstLogin = await app.inject({
+      method: "POST",
+      url: "/auth/google",
+      payload: { id_token: "valid-token" },
+    });
+    const first = firstLogin.json() as any;
+
+    mockGoogleProfile();
+    const secondLogin = await app.inject({
+      method: "POST",
+      url: "/auth/google",
+      payload: { id_token: "valid-token" },
+    });
+    const second = secondLogin.json() as any;
+
+    const logoutResponse = await app.inject({
+      method: "POST",
+      url: "/auth/logout",
+      headers: { authorization: `Bearer ${first.accessToken}` },
+      payload: { refresh_token: first.refreshToken },
+    });
+    expect(logoutResponse.statusCode).toBe(204);
+
+    const firstRefresh = await app.inject({
+      method: "POST",
+      url: "/auth/refresh",
+      payload: { refresh_token: first.refreshToken },
+    });
+    expect(firstRefresh.statusCode).toBe(401);
+
+    const secondRefresh = await app.inject({
+      method: "POST",
+      url: "/auth/refresh",
+      payload: { refresh_token: second.refreshToken },
+    });
+    expect(secondRefresh.statusCode).toBe(200);
+  });
 });

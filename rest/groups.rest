@@ -1,0 +1,62 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Crear un grupo: el creador queda como único administrador.
+# El resto de alias nacen sin reclamar: "Bea" y "Carlos" todavía no son
+# usuarios, solo nombres con los que ya se puede repartir gastos.
+# @name createGroup
+POST {{baseUrl}}/groups
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "name": "Viaje a Lisboa",
+  "description": "Fin de semana de octubre",
+  "aliases": ["Bea", "Carlos"]
+}
+
+### Listar mis grupos (solo los que tengo alias reclamado)
+GET {{baseUrl}}/groups?page=1&limit=20
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Obtener un grupo y cuál es mi alias en él
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Obtener el mismo grupo sin ser miembro (403 esperado)
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}
+
+### Editar el grupo (solo un administrador puede)
+PATCH {{baseUrl}}/groups/{{createGroup.response.body.$.id}}
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "description": "Fin de semana de noviembre, al final"
+}
+
+### Listar los miembros del grupo
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/members
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Añadir un alias más (no vincula a ningún usuario)
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/members
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "aliases": ["Dani"]
+}
+
+### Añadir un alias duplicado (409 esperado)
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/members
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "aliases": ["bea"]
+}
+
+### Eliminar el grupo (solo un administrador, y borra todo lo que contiene)
+DELETE {{baseUrl}}/groups/{{createGroup.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

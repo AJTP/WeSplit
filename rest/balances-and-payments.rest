@@ -1,0 +1,32 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Saldos del grupo, con las transferencias que lo saldarían
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/balances
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Resumen de saldos del usuario en todos sus grupos
+GET {{baseUrl}}/me/balances
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Registrar un pago (lo puede hacer cualquier miembro, no solo las dos partes)
+# @name createPayment
+POST {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/payments
+Content-Type: application/json
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+{
+  "from_member_id": "PEGAR_MEMBER_ID_QUE_PAGA",
+  "to_member_id": "PEGAR_MEMBER_ID_QUE_RECIBE",
+  "amount": 30,
+  "paid_on": "2026-03-16",
+  "note": "Bizum"
+}
+
+### Listar pagos del grupo
+GET {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/payments
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Eliminar un pago (borrado lógico)
+DELETE {{baseUrl}}/groups/{{createGroup.response.body.$.id}}/payments/{{createPayment.response.body.$.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

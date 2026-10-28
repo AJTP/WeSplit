@@ -74,8 +74,13 @@ export async function logout(
   request: ZodRequest<typeof logoutSchema>,
   reply: ZodReply<typeof logoutSchema>,
 ): Promise<void> {
-  await tokenService.revokeAllRefreshTokens(request.server.pg, request.user.id);
-  reply.status(204).send(null);
+  const refreshToken = request.body?.refresh_token;
+  if (refreshToken) {
+    await tokenService.revokeRefreshToken(request.server.pg, request.user.id, refreshToken);
+  } else {
+    await tokenService.revokeAllRefreshTokens(request.server.pg, request.user.id);
+  }
+  reply.status(204).send();
 }
 
 export async function getMe(

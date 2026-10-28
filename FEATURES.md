@@ -11,45 +11,48 @@ Añade cada feature al final de su sección con el formato indicado.
   - [✅ Obtener usuario por ID](#obtener-usuario-por-id)
   - [✅ Refrescar access token](#refrescar-access-token)
   - [✅ Cerrar sesión en todos los dispositivos](#cerrar-sesión-en-todos-los-dispositivos)
-  - [⬜ Eliminar usuario](#eliminar-usuario)
-  - [⬜ Cerrar sesión en el dispositivo actual](#cerrar-sesión-en-el-dispositivo-actual)
-  - [⬜ Vincular y desvincular proveedores de login](#vincular-y-desvincular-proveedores-de-login)
+  - [✅ Eliminar usuario](#eliminar-usuario)
+  - [✅ Cerrar sesión en el dispositivo actual](#cerrar-sesión-en-el-dispositivo-actual)
+  - [✅ Vincular y desvincular proveedores de login](#vincular-y-desvincular-proveedores-de-login)
 - [Grupos](#grupos)
-  - [⬜ Crear grupo](#crear-grupo)
-  - [⬜ Listar grupos de un usuario](#listar-grupos-de-un-usuario)
-  - [⬜ Editar grupo](#editar-grupo)
-  - [⬜ Eliminar grupo](#eliminar-grupo)
-  - [⬜ Listar miembros de un grupo](#listar-miembros-de-un-grupo)
-  - [⬜ Añadir miembros a un grupo](#añadir-miembros-a-un-grupo)
-  - [⬜ Editar miembro de un grupo](#editar-miembro-de-un-grupo)
-  - [⬜ Eliminar miembro de un grupo](#eliminar-miembro-de-un-grupo)
-  - [⬜ Obtener enlace de invitación del grupo](#obtener-enlace-de-invitación-del-grupo)
-  - [⬜ Ver un grupo desde el enlace de invitación](#ver-un-grupo-desde-el-enlace-de-invitación)
-  - [⬜ Unirse a un grupo mediante enlace](#unirse-a-un-grupo-mediante-enlace)
-  - [⬜ Cambiar de alias en el grupo](#cambiar-de-alias-en-el-grupo)
+  - [✅ Crear grupo](#crear-grupo)
+  - [✅ Listar grupos de un usuario](#listar-grupos-de-un-usuario)
+  - [✅ Obtener un grupo](#obtener-un-grupo)
+  - [✅ Editar grupo](#editar-grupo)
+  - [✅ Eliminar grupo](#eliminar-grupo)
+  - [✅ Listar miembros de un grupo](#listar-miembros-de-un-grupo)
+  - [✅ Añadir miembros a un grupo](#añadir-miembros-a-un-grupo)
+  - [✅ Editar miembro de un grupo](#editar-miembro-de-un-grupo)
+  - [✅ Eliminar miembro de un grupo](#eliminar-miembro-de-un-grupo)
+  - [✅ Obtener enlace de invitación del grupo](#obtener-enlace-de-invitación-del-grupo)
+  - [✅ Ver un grupo desde el enlace de invitación](#ver-un-grupo-desde-el-enlace-de-invitación)
+  - [✅ Unirse a un grupo mediante enlace](#unirse-a-un-grupo-mediante-enlace)
+  - [✅ Cambiar de alias en el grupo](#cambiar-de-alias-en-el-grupo)
 - [Gastos](#gastos)
   - Gastos individuales
-    - [⬜ Registrar gasto individual](#registrar-gasto-individual)
-    - [⬜ Listar gastos individuales](#listar-gastos-individuales)
-    - [⬜ Ver detalle de un gasto individual](#ver-detalle-de-un-gasto-individual)
-    - [⬜ Editar gasto individual](#editar-gasto-individual)
-    - [⬜ Eliminar gasto individual](#eliminar-gasto-individual)
+    - [✅ Registrar gasto individual](#registrar-gasto-individual)
+    - [✅ Listar gastos individuales](#listar-gastos-individuales)
+    - [✅ Ver detalle de un gasto individual](#ver-detalle-de-un-gasto-individual)
+    - [✅ Editar gasto individual](#editar-gasto-individual)
+    - [✅ Eliminar gasto individual](#eliminar-gasto-individual)
   - Gastos de grupo
-    - [⬜ Registrar gasto de grupo](#registrar-gasto-de-grupo)
-    - [⬜ Listar gastos de grupo](#listar-gastos-de-grupo)
-    - [⬜ Ver detalle de un gasto de grupo](#ver-detalle-de-un-gasto-de-grupo)
-    - [⬜ Editar gasto de grupo](#editar-gasto-de-grupo)
-    - [⬜ Eliminar gasto de grupo](#eliminar-gasto-de-grupo)
+    - [✅ Registrar gasto de grupo](#registrar-gasto-de-grupo)
+    - [✅ Listar gastos de grupo](#listar-gastos-de-grupo)
+    - [✅ Ver detalle de un gasto de grupo](#ver-detalle-de-un-gasto-de-grupo)
+    - [✅ Editar gasto de grupo](#editar-gasto-de-grupo)
+    - [✅ Eliminar gasto de grupo](#eliminar-gasto-de-grupo)
 - [Categorías](#categorías)
-  - [⬜ Listar categorías](#listar-categorías)
-  - [⬜ Crear categoría personalizada](#crear-categoría-personalizada)
-  - [⬜ Editar categoría personalizada](#editar-categoría-personalizada)
-  - [⬜ Eliminar categoría personalizada](#eliminar-categoría-personalizada)
+  - [✅ Listar categorías](#listar-categorías)
+  - [✅ Crear categoría personalizada](#crear-categoría-personalizada)
+  - [✅ Editar categoría personalizada](#editar-categoría-personalizada)
+  - [✅ Eliminar categoría personalizada](#eliminar-categoría-personalizada)
 - [Saldos y liquidaciones](#saldos-y-liquidaciones)
-  - [⬜ Listar saldos de un grupo](#listar-saldos-de-un-grupo)
-  - [⬜ Resumen de saldos del usuario](#resumen-de-saldos-del-usuario)
+  - [✅ Listar saldos de un grupo](#listar-saldos-de-un-grupo)
+  - [✅ Resumen de saldos del usuario](#resumen-de-saldos-del-usuario)
 - [Pagos](#pagos)
-  - [⬜ Registrar pago entre miembros](#registrar-pago-entre-miembros)
+  - [✅ Registrar pago entre miembros](#registrar-pago-entre-miembros)
+  - [✅ Listar pagos de un grupo](#listar-pagos-de-un-grupo)
+  - [✅ Eliminar un pago](#eliminar-un-pago)
 - [Transversal](#transversal)
   - [⬜ Paginación y filtrado en listados](#paginación-y-filtrado-en-listados)
 - [Modelo de datos](#modelo-de-datos)
@@ -109,24 +112,24 @@ Añade cada feature al final de su sección con el formato indicado.
 
 ### Eliminar usuario
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el usuario autenticado puede borrar su cuenta.
 - **Endpoints (orientativo):** `DELETE /users/me`
-- **Notas:** la BD ya borra en cascada sus identidades y refresh tokens. Pendiente de definir qué pasa con sus gastos y con los grupos a los que tiene acceso, y si el borrado es definitivo o lógico. Sus miembros de grupo no se borran: lo coherente con el modelo de alias es desvincularlos del usuario y dejarlos como alias sin dueño, para no alterar los gastos ni los saldos de los demás.
+- **Notas:** borrado **definitivo**. La BD lo resuelve entero por claves foráneas: identidades, refresh tokens, categorías propias y gastos individuales se borran en cascada; sus miembros de grupo quedan desvinculados (`user_id` a NULL, alias sin dueño) y sus gastos y pagos de grupo sobreviven sin autor. Ni los gastos ni los saldos de los demás miembros cambian.
 
 ### Cerrar sesión en el dispositivo actual
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** revocar solo el refresh token del dispositivo desde el que se cierra sesión.
-- **Endpoints (orientativo):** `POST /auth/logout` (con el refresh token en el body) o similar.
-- **Notas:** hoy solo existe el cierre en todos los dispositivos.
+- **Endpoints (orientativo):** `POST /auth/logout`, con `refresh_token` opcional en el body.
+- **Notas:** mismo endpoint que el cierre en todos los dispositivos, no uno nuevo. Sin body, revoca todos los refresh tokens (comportamiento histórico); con `refresh_token`, revoca solo ese. Compatible hacia atrás.
 
 ### Vincular y desvincular proveedores de login
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** asociar a una cuenta otros proveedores de identidad además de Google, y quitarlos.
 - **Endpoints (orientativo):** `POST /users/me/identities`, `DELETE /users/me/identities/:provider`
-- **Notas:** la tabla `identities` ya está preparada para varios proveedores. Pendiente de definir la regla para no dejar la cuenta sin ningún método de acceso.
+- **Notas:** la tabla `identities` ya estaba preparada para varios proveedores. Incluye también `GET /users/me/identities` para listar las vinculadas. Vincular es idempotente si el proveedor ya era de este mismo usuario, y se rechaza con 409 si ya pertenece a otro. Desvincular comprueba primero que el proveedor exista (404 si no) y solo después si es el último método de acceso de la cuenta (409 si lo es, para no dejarla sin forma de entrar).
 
 ## Grupos
 
@@ -151,77 +154,84 @@ El flujo previsto es el de Tricount:
 
 ### Crear grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un usuario autenticado puede crear un grupo de gastos compartidos. Al crearlo se crea también su miembro, con su nombre, ya vinculado a su usuario y con rol de administrador, y puede añadir de una vez el resto de miembros indicando solo su nombre.
 - **Endpoints (orientativo):** `POST /groups`
-- **Notas:** el enlace de invitación del grupo se genera aquí y ya no cambia. Pendiente de definir el nombre del grupo, si admite descripción y si el creador es el único administrador. Pendiente de decidir si los miembros iniciales se envían en la misma petición o se añaden después con `POST /groups/:groupId/members`.
+- **Notas:** el enlace de invitación del grupo se genera aquí y ya no cambia. El nombre es obligatorio; la descripción es opcional y editable. El creador es el único administrador al crear el grupo. Los miembros iniciales se envían en la misma petición (`aliases: string[]`), con el mismo efecto que llamar después a `POST /groups/:groupId/members`.
 
 ### Listar grupos de un usuario
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un usuario autenticado puede ver todos los grupos de los que es miembro.
 - **Endpoints (orientativo):** `GET /groups`
-- **Notas:** son los grupos en los que el usuario tiene un alias reclamado. Conviene devolver en cada uno qué alias es el suyo, que es lo que el frontend necesita para marcar sus gastos. Paginación según la sección [Transversal](#transversal).
+- **Notas:** son los grupos en los que el usuario tiene un alias reclamado. Devuelve en cada uno su alias, su rol y el número de miembros del grupo, que es lo que el frontend necesita para marcar sus gastos. Paginación según la sección [Transversal](#transversal).
+
+### Obtener un grupo
+
+- **Estado:** ✅ hecha
+- **Descripción:** un miembro puede consultar un grupo concreto y cuál es su alias en él. No estaba en el backlog original: se añadió porque, tras unirse por enlace, hacía falta una forma de leer ese grupo sin tener que listarlos todos.
+- **Endpoints (orientativo):** `GET /groups/:groupId`
+- **Notas:** 404 si el grupo no existe, 403 si existe pero el usuario no es miembro (los ids son UUID inadivinables, así que el 403 no revela nada útil).
 
 ### Editar grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un administrador del grupo puede modificar sus datos.
 - **Endpoints (orientativo):** `PATCH /groups/:groupId`
-- **Notas:** solo administradores. Pendiente de definir qué campos son editables.
+- **Notas:** solo administradores. Los campos editables son el nombre y la descripción; el enlace de invitación no se edita aquí, es permanente.
 
 ### Eliminar grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un administrador del grupo puede eliminarlo.
 - **Endpoints (orientativo):** `DELETE /groups/:groupId`
-- **Notas:** solo administradores. Pendiente de definir si es borrado definitivo o lógico y qué pasa con los gastos asociados.
+- **Notas:** solo administradores. El borrado es definitivo y se lleva por delante miembros, gastos, repartos y pagos del grupo. Técnicamente requiere diferir las comprobaciones de integridad hasta el `COMMIT` (`SET CONSTRAINTS ALL DEFERRED`), documentado en la sección [Modelo de datos](#modelo-de-datos).
 
 ### Listar miembros de un grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** devuelve los miembros del grupo con su alias y, si lo tienen, el usuario al que están vinculados. Es la lista que el frontend usa para elegir pagador y participantes de un gasto, y para que un usuario recién llegado elija cuál es su alias.
 - **Endpoints (orientativo):** `GET /groups/:groupId/members`
 - **Notas:** solo para miembros del grupo. Quien todavía no lo es y llega con el enlace usa [Ver un grupo desde el enlace de invitación](#ver-un-grupo-desde-el-enlace-de-invitación). El nombre que se devuelve es siempre el alias, no el del usuario vinculado. Basta con indicar de cada miembro si está vinculado, a qué usuario y con qué rol, sin exponer su email.
 
 ### Añadir miembros a un grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** añadir uno o varios miembros a un grupo existente indicando únicamente su nombre. No hace falta que esas personas estén registradas ni que se les invite: desde que existe el alias ya se le pueden imputar gastos.
 - **Endpoints (orientativo):** `POST /groups/:groupId/members`
-- **Notas:** el alias nace sin vincular a ningún usuario y con rol de miembro. Pendiente de definir quién puede añadir miembros (solo administradores o cualquier miembro) y si el nombre debe ser único dentro del grupo, lo que es recomendable para que al elegir alias no haya ambigüedad. Pendiente de decidir si se permite además crear un miembro ya vinculado a un usuario conocido.
+- **Notas:** el alias nace sin vincular a ningún usuario y con rol de miembro. Lo puede hacer cualquier miembro del grupo, no solo administradores. El nombre es único dentro del grupo (sin distinguir mayúsculas), así que al elegir alias no hay ambigüedad; dos alias iguales en la misma petición se rechazan con 400 y uno que ya existe en el grupo con 409. **No se permite crear un miembro ya vinculado a un usuario conocido**: el único camino para vincular un alias es el enlace de invitación.
 
 ### Editar miembro de un grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** renombrar el alias de un miembro, por ejemplo para corregir una errata antes de que su dueño lo reclame.
 - **Endpoints (orientativo):** `PATCH /groups/:groupId/members/:memberId`
-- **Notas:** renombrar no afecta a los gastos, que apuntan al id del miembro. Pendiente de decidir quién puede renombrar y si el alias de un miembro ya vinculado solo lo puede cambiar su propio usuario.
+- **Notas:** renombrar no afecta a los gastos, que apuntan al id del miembro. Un alias sin reclamar lo puede renombrar cualquier miembro; uno ya reclamado, solo su dueño o un administrador.
 
 ### Eliminar miembro de un grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** quitar un miembro del grupo.
 - **Endpoints (orientativo):** `DELETE /groups/:groupId/members/:memberId`
-- **Notas:** pendiente de definir quién puede eliminar miembros y si un usuario puede quitar su propio alias. Lo razonable es bloquear el borrado si el miembro aparece en algún gasto o pago, o si su saldo no es cero, y pedir que antes se liquide o se reasignen sus gastos. Eliminar un miembro vinculado no borra el usuario, solo su participación en ese grupo, y con ella deja de pertenecer al grupo. Conviene impedir que se quede sin ningún administrador.
+- **Notas:** solo un administrador puede eliminar miembros. Se bloquea con 409 si el miembro aparece en algún gasto o pago (hay que liquidar o reasignar antes) o si es el último administrador del grupo. Eliminar un miembro vinculado no borra el usuario, solo su participación en ese grupo. Abandonar el grupo por uno mismo queda fuera de alcance.
 
 ### Obtener enlace de invitación del grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** obtener el enlace de invitación del grupo para compartirlo.
 - **Endpoints (orientativo):** `GET /groups/:groupId/invitation`
-- **Notas:** cada grupo tiene **un único enlace, creado junto con el grupo y permanente**: no se regenera ni se revoca, así que un enlace compartido en su día sigue funcionando siempre. El token debe ser aleatorio y no adivinable, generado con un aleatorio criptográfico. Pendiente de decidir quién puede obtenerlo (administradores o cualquier miembro).
+- **Notas:** cada grupo tiene **un único enlace, creado junto con el grupo y permanente**: no se regenera ni se revoca, así que un enlace compartido en su día sigue funcionando siempre. El token es un aleatorio criptográfico de 32 bytes. Puede obtenerlo cualquier miembro del grupo, no solo administradores.
 
 ### Ver un grupo desde el enlace de invitación
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** devuelve los datos básicos del grupo y la lista de sus alias a quien llega con el enlace, para que pueda elegir cuál es el suyo antes de entrar.
 - **Endpoints (orientativo):** `GET /invitations/:token`
 - **Notas:** lo que autoriza aquí es tener el token, no ser miembro. Por eso devuelve lo mínimo: nombre del grupo, alias y cuáles están ya cogidos. Ningún importe, ningún saldo y ningún email. Responder 404 si el token no corresponde a ningún grupo.
 
 ### Unirse a un grupo mediante enlace
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un usuario autenticado llega con el enlace, indica cuál de los alias es el suyo y con eso entra en el grupo. Unirse y reclamar alias son la misma operación. A partir de ese momento ese miembro queda vinculado a su usuario y todos los gastos, saldos y pagos que ya estaban a nombre de ese alias pasan a reflejarse en su dashboard.
 - **Endpoints (orientativo):** `POST /invitations/:token/join`, con el alias elegido en el body.
 - **Notas:** no se modifica ningún gasto. Los gastos apuntan al id del miembro, así que basta con escribir el usuario en el miembro para que todo lo anterior quede vinculado de forma retroactiva.
@@ -229,87 +239,86 @@ El flujo previsto es el de Tricount:
   - Un alias ya reclamado por otro usuario no se puede coger: la petición se rechaza con un conflicto. Así nadie puede apropiarse de los gastos de otro.
   - Un usuario puede tener como mucho un alias por grupo. Si ya es miembro y vuelve a entrar por el enlace, no se duplica nada; cambiar de alias es la feature siguiente.
   - El alias conserva su nombre al reclamarlo. Se sigue mostrando ese nombre en gastos, saldos y listados, no el del usuario que lo cogió.
-  - El miembro entra con rol de miembro, no de administrador.
-  - Pendiente de decidir si un usuario que no se corresponde con ningún alias existente puede crear el suyo al vuelo.
+  - El miembro entra con el rol que ya tuviera ese alias (siempre `member`, porque los alias nacen así). Crear un alias al vuelo si ninguno corresponde al usuario queda fuera de alcance.
 
 ### Cambiar de alias en el grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un miembro del grupo se pasa a otro alias, para corregirse si se equivocó al elegir.
 - **Endpoints (orientativo):** `POST /groups/:groupId/members/:memberId/claim`
-- **Notas:** el alias que tenía vuelve a quedar libre, con sus gastos intactos, y el nuevo queda vinculado a su usuario. Solo se puede pasar a un alias sin dueño; si ya tiene otro, se rechaza con un conflicto. Pendiente de decidir si un miembro puede soltar su alias y dejar de pertenecer al grupo sin coger otro.
+- **Notas:** el alias que tenía vuelve a quedar libre, con sus gastos intactos, y el nuevo queda vinculado a su usuario. El rol se arrastra al nuevo alias, para no dejar el grupo sin administrador por un simple cambio de alias. Solo se puede pasar a un alias sin dueño; si ya tiene otro, se rechaza con un conflicto. Soltar el alias sin coger otro (abandonar el grupo) queda fuera de alcance.
 
 ## Gastos
 
 ### Registrar gasto individual
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un usuario autenticado puede registrar un gasto sin asociarlo a ningún grupo.
 - **Endpoints (orientativo):** `POST /expenses`
-- **Notas:** pendiente de definir los campos (descripción, fecha) y si un gasto individual puede convertirse más adelante en gasto de grupo. Los importes, aquí y en todo el proyecto, son siempre en euros.
+- **Notas:** campos: descripción, importe, fecha y categoría opcional (predefinida o propia del usuario, a diferencia de los gastos de grupo). Convertir un gasto individual en uno de grupo queda fuera de alcance. Los importes, aquí y en todo el proyecto, son siempre en euros.
 
 ### Listar gastos individuales
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** un usuario autenticado puede ver sus gastos individuales.
 - **Endpoints (orientativo):** `GET /expenses`
 - **Notas:** solo devuelve gastos del propio usuario. Filtros por fecha y categoría, con paginación según la sección [Transversal](#transversal).
 
 ### Ver detalle de un gasto individual
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** devuelve los datos de un gasto individual concreto.
 - **Endpoints (orientativo):** `GET /expenses/:expenseId`
 - **Notas:** solo el propietario puede verlo. Responder 404 si no existe o pertenece a otro usuario, para no revelar su existencia.
 
 ### Editar gasto individual
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el propietario puede modificar los datos de un gasto individual.
 - **Endpoints (orientativo):** `PATCH /expenses/:expenseId`
-- **Notas:** pendiente de definir qué campos son editables y si se guarda historial de cambios.
+- **Notas:** todos los campos son editables (descripción, importe, fecha, categoría). No se guarda historial de cambios.
 
 ### Eliminar gasto individual
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el propietario puede eliminar un gasto individual.
 - **Endpoints (orientativo):** `DELETE /expenses/:expenseId`
-- **Notas:** pendiente de definir si el borrado es definitivo o lógico.
+- **Notas:** el borrado es lógico (`deleted_at`), igual que en los gastos de grupo.
 
 ### Registrar gasto de grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** cualquier miembro del grupo puede registrar un gasto en él, aunque no sea quien lo pagó. Debe poder indicar qué miembro pagó y entre qué miembros se reparte.
 - **Endpoints (orientativo):** `POST /groups/:groupId/expenses`
-- **Notas:** el pagador y los participantes se identifican por el id del miembro, no por el del usuario, y pueden ser alias sin vincular (ver [Modelo de miembros y alias](#modelo-de-miembros-y-alias)). Quien registra el gasto tiene que ser miembro, es decir, tener su alias reclamado. El importe se guarda siempre como cantidad exacta por cada participante: el cálculo de las partes (iguales, porcentajes, etc.) lo hace el frontend y la API solo recibe el resultado. Reglas a validar: todos los miembros indicados deben pertenecer al grupo y la suma de los importes de los participantes debe coincidir con el total del gasto. Incluye la categoría del gasto (ver sección [Categorías](#categorías)).
+- **Notas:** el pagador y los participantes se identifican por el id del miembro, no por el del usuario, y pueden ser alias sin vincular (ver [Modelo de miembros y alias](#modelo-de-miembros-y-alias)). Quien registra el gasto tiene que ser miembro, es decir, tener su alias reclamado. El importe se guarda siempre como cantidad exacta por cada participante: el cálculo de las partes (iguales, porcentajes, etc.) lo hace el frontend y la API solo recibe el resultado. Validado en el servicio (no es una restricción de la base de datos): todos los miembros indicados deben pertenecer al grupo (422 si no) y la suma de los importes de los participantes debe coincidir con el total del gasto (422 si no, con ambos importes en el detalle del error). La categoría es opcional y **solo puede ser una categoría predefinida**, nunca una personalizada de quien registra el gasto (ver sección [Categorías](#categorías)): así ninguna categoría privada se filtra al resto del grupo.
 
 ### Listar gastos de grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** cualquier miembro del grupo puede ver los gastos de ese grupo.
 - **Endpoints (orientativo):** `GET /groups/:groupId/expenses`
 - **Notas:** solo para miembros. Filtros por fecha, categoría y pagador (por id de miembro), con paginación según la sección [Transversal](#transversal).
 
 ### Ver detalle de un gasto de grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** devuelve los datos de un gasto de grupo concreto, con qué miembro pagó y cómo se reparte entre los miembros.
 - **Endpoints (orientativo):** `GET /groups/:groupId/expenses/:expenseId`
 - **Notas:** solo para miembros del grupo. Responder 404 si el gasto no pertenece a ese grupo.
 
 ### Editar gasto de grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** modificar un gasto de grupo ya registrado (importe, descripción, pagador, reparto).
 - **Endpoints (orientativo):** `PATCH /groups/:groupId/expenses/:expenseId`
-- **Notas:** puede editarlo cualquier miembro del grupo, lo haya registrado él o no y sea o no el pagador. No hace falta ser administrador. Pendiente de definir si se guarda historial de cambios.
+- **Notas:** puede editarlo cualquier miembro del grupo, lo haya registrado él o no y sea o no el pagador. No hace falta ser administrador. Si se cambia el importe o el reparto, la suma tiene que seguir cuadrando; si uno de los dos cambia y el otro no, y dejan de cuadrar, se rechaza con 422 (no se reescala el reparto por nuestra cuenta). No se guarda historial de cambios.
 
 ### Eliminar gasto de grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** eliminar un gasto de grupo.
 - **Endpoints (orientativo):** `DELETE /groups/:groupId/expenses/:expenseId`
-- **Notas:** mismo criterio que editar: cualquier miembro del grupo. Pendiente de decidir si el borrado es definitivo o lógico. Afecta a los saldos del grupo.
+- **Notas:** mismo criterio que editar: cualquier miembro del grupo. El borrado es lógico (`deleted_at`): el gasto deja de listarse y de contar en los saldos, pero no se pierde.
 
 ## Categorías
 
@@ -317,65 +326,79 @@ Las categorías clasifican los gastos. Hay dos tipos: predefinidas, registradas 
 
 ### Listar categorías
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** devuelve las categorías predefinidas y las personalizadas del usuario autenticado, para elegirlas al registrar un gasto.
 - **Endpoints (orientativo):** `GET /categories`
-- **Notas:** las predefinidas no se pueden modificar ni eliminar. Pendiente de decidir si se cargan mediante migración o seed. Paginación según la sección [Transversal](#transversal).
+- **Notas:** las predefinidas no se pueden modificar ni eliminar y aparecen primero en el listado, seguidas de las personalizadas por orden alfabético. Se cargan mediante migración (`seed-predefined-categories`), no con un seed aparte. Paginación según la sección [Transversal](#transversal).
 
 ### Crear categoría personalizada
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el usuario crea una categoría propia para clasificar sus gastos.
 - **Endpoints (orientativo):** `POST /categories`
-- **Notas:** visible solo para su creador. Pendiente de definir si el nombre debe ser único por usuario y si puede coincidir con el nombre de una predefinida. Una categoría es su nombre y, opcionalmente, un color: no lleva icono.
+- **Notas:** visible solo para su creador. El nombre es único por usuario (sin distinguir mayúsculas) y puede coincidir con el de una predefinida. Una categoría es su nombre y, opcionalmente, un color: no lleva icono.
 
 ### Editar categoría personalizada
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el propietario puede renombrar o modificar una categoría personalizada.
 - **Endpoints (orientativo):** `PATCH /categories/:categoryId`
-- **Notas:** solo el propietario. Si los gastos referencian la categoría por id, el cambio se refleja en ellos sin tocarlos.
+- **Notas:** solo el propietario. Si los gastos referencian la categoría por id, el cambio se refleja en ellos sin tocarlos. Tocar una predefinida o una ajena responde 404, para no revelar las categorías privadas de otro usuario.
 
 ### Eliminar categoría personalizada
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el propietario puede eliminar una categoría personalizada.
 - **Endpoints (orientativo):** `DELETE /categories/:categoryId`
-- **Notas:** solo el propietario. Pendiente de decidir qué pasa con los gastos que la usan: reasignarlos a una predefinida, bloquear el borrado o dejarlos sin categoría.
+- **Notas:** solo el propietario (404 en cualquier otro caso, igual que al editar). Los gastos que la usaban se quedan sin categoría: lo resuelve por sí solo el `ON DELETE SET NULL` del esquema, sin lógica adicional.
 
 ## Saldos y liquidaciones
 
 ### Listar saldos de un grupo
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** cualquier miembro del grupo puede ver el saldo de cada miembro: cuánto le deben o cuánto debe.
 - **Endpoints (orientativo):** `GET /groups/:groupId/balances`
 - **Notas:** solo para miembros, igual que los gastos de los que salen estos saldos. Depende de los gastos de grupo y de sus importes exactos por participante. Devuelve el saldo neto de cada miembro y las transferencias simplificadas calculadas en el momento de la consulta. Los saldos se calculan por miembro y se devuelven todos, estén vinculados a un usuario o no: un grupo cuyos miembros son solo alias tiene saldos completos y correctos.
 
 ### Resumen de saldos del usuario
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** el dashboard del usuario autenticado: cuánto debe y cuánto le deben en total, sumando todos sus grupos.
 - **Endpoints (orientativo):** `GET /me/balances`
-- **Notas:** suma el saldo de los miembros vinculados a su usuario, un miembro por grupo como mucho. Al coger un alias, los gastos previos de ese alias aparecen aquí sin ninguna migración de datos.
+- **Notas:** suma el saldo de los miembros vinculados a su usuario, un miembro por grupo como mucho. Al coger un alias, los gastos previos de ese alias aparecen aquí sin ninguna migración de datos. Devuelve tres cifras, no una: lo que le deben, lo que debe y el neto. **No se netean los grupos entre sí**: deber 50 en un grupo y que le deban 50 en otro no es "no deber nada", porque no se puede pagar una deuda con el crédito de un grupo distinto.
 
 ## Pagos
 
 ### Registrar pago entre miembros
 
-- **Estado:** ⬜ pendiente
+- **Estado:** ✅ hecha
 - **Descripción:** registrar un pago de dinero de un miembro a otro del mismo grupo para saldar, total o parcialmente, lo que le debe. El pago ajusta los saldos del grupo.
 - **Endpoints (orientativo):** `POST /groups/:groupId/payments`
-- **Notas:** emisor y receptor se identifican por id de miembro y pueden ser alias sin vincular, igual que en los gastos: dos personas sin cuenta pueden saldarse entre ellas y que quede registrado. Pendiente de confirmar si rige la misma regla que en los gastos, que lo abriría a cualquier miembro del grupo y no solo a las dos partes. Pendiente también de decidir si el receptor debe confirmarlo, teniendo en cuenta que puede no tener usuario detrás a quien pedir confirmación. Pendiente de definir si los pagos son editables o eliminables.
+- **Notas:** emisor y receptor se identifican por id de miembro y pueden ser alias sin vincular, igual que en los gastos: dos personas sin cuenta pueden saldarse entre ellas y que quede registrado. Lo puede registrar **cualquier miembro del grupo**, no solo las dos partes, mismo criterio que los gastos: si quien paga es un alias sin usuario detrás, alguien tiene que poder registrarlo por él. El receptor no confirma nada. Los pagos no son editables, solo eliminables (ver features siguientes).
+
+### Listar pagos de un grupo
+
+- **Estado:** ✅ hecha
+- **Descripción:** cualquier miembro del grupo puede ver los pagos registrados en él. No estaba en el backlog original: se añadió junto con el borrado, para poder revisar un pago antes de eliminarlo.
+- **Endpoints (orientativo):** `GET /groups/:groupId/payments`
+- **Notas:** solo para miembros. Paginación según la sección [Transversal](#transversal). Sin filtros propios por ahora.
+
+### Eliminar un pago
+
+- **Estado:** ✅ hecha
+- **Descripción:** cualquier miembro del grupo puede eliminar un pago mal registrado. No estaba en el backlog original: sin él, un pago equivocado era irreparable y la columna `payments.deleted_at` del esquema habría quedado sin uso.
+- **Endpoints (orientativo):** `DELETE /groups/:groupId/payments/:paymentId`
+- **Notas:** borrado lógico, igual que los gastos: deja de contar en los saldos pero no se pierde.
 
 ## Transversal
 
 ### Paginación y filtrado en listados
 
-- **Estado:** ⬜ pendiente
+- **Estado:** 🔄 en curso
 - **Descripción:** los endpoints que devuelven colecciones son paginados y permiten filtrar sus resultados.
 - **Endpoints (orientativo):** `GET /groups`, `GET /expenses`, `GET /groups/:groupId/expenses`, `GET /groups/:groupId/members`, `GET /categories`, y cualquier otro listado que se añada.
-- **Notas:** pendiente de decidir la convención común: paginación por página o por cursor, tamaño máximo de página, y si la respuesta incluye el total. Los filtros concretos (fecha, pagador, categoría, etc.) se definen en la feature de cada listado. Pendiente de unificar los nombres de los parámetros entre endpoints.
+- **Notas:** convención cerrada e implementada en `GET /groups` y `GET /groups/:groupId/members`: querystring `?page=1&limit=20` (página en base 1, límite máximo 100, por defecto 20), respuesta envuelta en `{ data: [...], pagination: { page, limit, total, total_pages } }`. Falta aplicarla al resto de listados a medida que se implementan. Los filtros concretos (fecha, pagador, categoría, etc.) se definen en la feature de cada listado.
 
 ## Modelo de datos
 
@@ -409,18 +432,18 @@ erDiagram
 
 ### Tablas
 
-| Tabla | Qué guarda | Clave |
-| --- | --- | --- |
-| `users` | Cuentas registradas. Ya existe. | `id` |
-| `identities` | Proveedores de login vinculados a una cuenta. Ya existe. | `id`, único `(provider, provider_user_id)` |
-| `refresh_tokens` | Refresh tokens opacos, revocables. Ya existe. | `id`, único `token_hash` |
-| `categories` | Categorías de gasto. `user_id` NULL = predefinida. | `id` |
-| `groups` | El grupo y su enlace de invitación permanente. | `id`, único `invitation_token` |
-| `group_members` | Los alias del grupo y, a la vez, quién pertenece a él y con qué rol. `user_id` NULL = sin reclamar. | `id`, único `(group_id, user_id)` |
-| `personal_expenses` | Gastos individuales, sin grupo ni reparto. | `id` |
-| `group_expenses` | Gasto del grupo: total, pagador y categoría. | `id` |
-| `group_expense_shares` | Cuánto le toca a cada participante de ese gasto. | `(group_expense_id, member_id)` |
-| `payments` | Dinero que un miembro entrega a otro para saldar. | `id` |
+| Tabla                  | Qué guarda                                                                                          | Clave                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| `users`                | Cuentas registradas. Ya existe.                                                                     | `id`                                       |
+| `identities`           | Proveedores de login vinculados a una cuenta. Ya existe.                                            | `id`, único `(provider, provider_user_id)` |
+| `refresh_tokens`       | Refresh tokens opacos, revocables. Ya existe.                                                       | `id`, único `token_hash`                   |
+| `categories`           | Categorías de gasto. `user_id` NULL = predefinida.                                                  | `id`                                       |
+| `groups`               | El grupo y su enlace de invitación permanente.                                                      | `id`, único `invitation_token`             |
+| `group_members`        | Los alias del grupo y, a la vez, quién pertenece a él y con qué rol. `user_id` NULL = sin reclamar. | `id`, único `(group_id, user_id)`          |
+| `personal_expenses`    | Gastos individuales, sin grupo ni reparto.                                                          | `id`                                       |
+| `group_expenses`       | Gasto del grupo: total, pagador y categoría.                                                        | `id`                                       |
+| `group_expense_shares` | Cuánto le toca a cada participante de ese gasto.                                                    | `(group_expense_id, member_id)`            |
+| `payments`             | Dinero que un miembro entrega a otro para saldar.                                                   | `id`                                       |
 
 ### Decisiones de diseño
 

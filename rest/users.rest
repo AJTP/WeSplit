@@ -1,0 +1,13 @@
+-- Active: 1790184526881@@127.0.0.1@5435@app_dev
+@baseUrl = http://localhost:3000
+
+### Obtener un usuario por id (datos públicos)
+GET {{baseUrl}}/users/{{googleLogin.response.body.$.user.id}}
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}
+
+### Eliminar la cuenta propia (borrado definitivo)
+# Identidades, refresh tokens, categorías propias y gastos individuales se
+# borran en cascada. Los alias en grupos quedan sin reclamar; sus gastos y
+# pagos de grupo sobreviven sin autor.
+DELETE {{baseUrl}}/users/me
+Authorization: Bearer {{googleLogin.response.body.$.accessToken}}

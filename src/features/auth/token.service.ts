@@ -24,3 +24,11 @@ export async function rotateRefreshToken(
 export async function revokeAllRefreshTokens(pg: Queryable, userId: string): Promise<void> {
   return refreshTokenRepository.revokeAllByUserId(pg, userId);
 }
+
+export async function revokeRefreshToken(
+  pg: Queryable,
+  userId: string,
+  rawToken: string,
+): Promise<boolean> {
+  return refreshTokenRepository.revokeByRawTokenForUser(pg, userId, rawToken);
+}
