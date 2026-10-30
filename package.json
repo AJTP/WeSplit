@@ -23,7 +23,10 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src test && prettier --check .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "dev-session": "tsx scripts/dev-session.ts",
+    "db:e2e:prepare": "tsx scripts/prepare-e2e-db.ts",
+    "db:seed": "tsx scripts/seed-dev.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.3.0",

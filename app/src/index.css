@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ---------- Tokens -----------------------------------------------------------
+   Tema oscuro de marca (no sigue al sistema). Todo son variables: un cambio aquí
+   se propaga a cada clase de la app. */
+@theme {
+  --color-canvas: #08080b;
+  --color-surface: #111117;
+  --color-surface-2: #181820;
+  --color-line: #262632;
+  --color-ink: #f5f5f8;
+  --color-ink-soft: #c2c2cd;
+  --color-muted: #80808f;
+  --color-accent: #d6ff3d;
+  --color-accent-text: #d6ff3d;
+  --color-on-accent: #09090c;
+  --color-glow: #7b5cff;
+  --color-positive: #3ddc97;
+  --color-negative: #ff5c7a;
+  --color-warning: #ffb020;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Arial Black", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* ---------- Base -------------------------------------------------------------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(
+        60rem 40rem at 95% -12%,
+        color-mix(in oklab, var(--color-accent) 13%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        50rem 36rem at -8% 108%,
+        color-mix(in oklab, var(--color-glow) 16%, transparent),
+        transparent 62%
+      );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Grano fino sobre toda la pantalla: le quita el aspecto plano. No intercepta clics. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -3%, 0) scale(1.06);
+  }
+}
+
+@keyframes sheen {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ---------- Utilidades propias ------------------------------------------------ */
+@utility card {
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-surface) 90%, transparent);
+  border: 1px solid var(--color-line);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, var(--color-ink) 5%, transparent),
+    0 24px 48px -32px rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(12px);
+}
+
+@utility card-hover {
+  transition:
+    transform 0.45s var(--ease-out-expo),
+    border-color 0.45s,
+    box-shadow 0.45s;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in oklab, var(--color-accent) 55%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--color-accent) 25%, transparent),
+      0 32px 60px -28px color-mix(in oklab, var(--color-accent) 40%, transparent);
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@utility display {
+  font-family: var(--font-display);
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+}
+
+@utility figure {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility animate-rise {
+  animation: rise 0.8s var(--ease-out-expo) both;
+}
+
+@utility animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+/* Texto con degradado animado: el acento "vivo" de los titulares. */
+@utility text-sheen {
+  background: linear-gradient(
+    100deg,
+    var(--color-ink) 0%,
+    var(--color-accent) 40%,
+    var(--color-ink) 60%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 6s linear infinite;
+}
+
+@utility glass {
+  background: color-mix(in oklab, var(--color-canvas) 72%, transparent);
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
